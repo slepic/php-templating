@@ -1,7 +1,10 @@
-.phony: test cs-check cs-fix
+.phony: install test cs-check cs-fix
+
+install:
+	docker-compose run --rm php composer install --no-interaction --no-suggest
 
 test:
-	docker-compose run --rm php make _test
+	docker-compose run --rm php vendor/bin/phpunit
 
 cs-check:
 	docker-compose run --rm php vendor/bin/phpcs --standard=PSR2 src tests
@@ -9,4 +12,4 @@ cs-check:
 cs-fix:
 	docker-compose run --rm php vendor/bin/phpcbf --standard=PSR2 src tests
 
-ci: cs-check test
+ci: install cs-check test
