@@ -4,6 +4,14 @@ declare(strict_types=1);
 
 namespace Slepic\Templating\Template;
 
+/**
+ * An implementation of TemplateInterface which wraps another implementation and keeps some default data
+ * which it then supplies to the inner template upon rendering.
+ *
+ * Overriding default values is allowed.
+ * A simple array_merge is used and so nested arrays are not merged recursively.
+ * However, this may change in future.
+ */
 class DefaultDataTemplate implements TemplateInterface
 {
     private TemplateInterface $template;
