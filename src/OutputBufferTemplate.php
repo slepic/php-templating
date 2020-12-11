@@ -26,7 +26,7 @@ class OutputBufferTemplate implements TemplateInterface
 
         \ob_start();
         try {
-            require($this->templateFile);
+            include($this->templateFile);
         } catch (\Throwable $e) {
             \ob_end_clean();
             throw $e;
