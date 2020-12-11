@@ -16,7 +16,7 @@ Install with composer
 
 ## Interfaces
 
-###[```TemplateInterface```](https://github.com/slepic/php-template/blob/master/src/TemplateInterface.php)
+### [```TemplateInterface```](https://github.com/slepic/php-template/blob/master/src/TemplateInterface.php)
 This is the abstraction of any data rendering template.
 
 ## Classes
@@ -24,7 +24,7 @@ This is the abstraction of any data rendering template.
 ### [```OutputBufferTemplate```](https://github.com/slepic/php-template/blob/master/src/OutputBufferTemplate.php)
 A simple template implementation, which renders the data using another PHP script (given its filename) and PHP ob_* functions.
 
-###[```DefaultDataTemplate```](https://github.com/slepic/php-template/blob/master/src/DefaultDataTemplate.php)
+### [```DefaultDataTemplate```](https://github.com/slepic/php-template/blob/master/src/DefaultDataTemplate.php)
 Template decorator which allows to feed your templates with default data hidden from the template consumer.
 
 ## Contribution
