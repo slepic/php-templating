@@ -38,6 +38,7 @@ If you create a library that depends on this one and you use composer, please co
 ### 1.1.0
 * added new class `DefaultDataTemplate`
 * `OutputBufferTemplate` now ends the output buffer if the included template throws an exception.
+* `OutputBufferTemplate` now uses `include` instead of `require` to execute the template script .
 
 ### 1.0.0
 
